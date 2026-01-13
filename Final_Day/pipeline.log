@@ -1,89 +1,89 @@
-2025-12-24 14:39:30,574 [INFO] Loaded dataset shape: (10000, 22)
-2025-12-24 14:39:30,575 [INFO] Target distribution:
-2025-12-24 14:39:30,576 [INFO] Customer_Type
+2026-01-13 12:54:15,324 [INFO] Loaded dataset shape: (10000, 22)
+2026-01-13 12:54:15,324 [INFO] Target distribution:
+2026-01-13 12:54:15,326 [INFO] Customer_Type
 New          0.5007
 Returning    0.4993
 Name: proportion, dtype: float64
-2025-12-24 14:39:30,585 [INFO] Detected categorical: ['Gender', 'Location', 'Product_Category', 'Payment_Method', 'Device_Used', 'Time_of_Day', 'Day_of_Week', 'Referral_Source']
-2025-12-24 14:39:30,585 [INFO] Detected numeric: ['Customer_ID', 'Age', 'Session_Duration', 'Pages_Visited', 'Items_in_Cart', 'Purchase_Completed', 'Discount_Applied', 'Total_Spent', 'Loyalty_Score', 'Time_Spent_on_Site', 'Clicks', 'Bounce_Rate', 'Revenue_Generated']
-2025-12-24 14:39:30,585 [INFO] 
+2026-01-13 12:54:15,335 [INFO] Detected categorical: ['Gender', 'Location', 'Product_Category', 'Payment_Method', 'Device_Used', 'Time_of_Day', 'Day_of_Week', 'Referral_Source']
+2026-01-13 12:54:15,335 [INFO] Detected numeric: ['Customer_ID', 'Age', 'Session_Duration', 'Pages_Visited', 'Items_in_Cart', 'Purchase_Completed', 'Discount_Applied', 'Total_Spent', 'Loyalty_Score', 'Time_Spent_on_Site', 'Clicks', 'Bounce_Rate', 'Revenue_Generated']
+2026-01-13 12:54:15,335 [INFO] 
 Training and tuning: logreg
-2025-12-24 14:39:32,180 [INFO] Validation metrics (logreg): {
+2026-01-13 12:54:16,597 [INFO] Validation metrics (logreg): {
   "accuracy": 0.482,
   "f1": 0.4823451032644903,
   "roc_auc": 0.49011287131177117,
   "pr_auc": 0.49417949658025817
 }
-2025-12-24 14:39:32,180 [INFO] Confusion matrix (logreg):
+2026-01-13 12:54:16,597 [INFO] Confusion matrix (logreg):
 [[361 390]
  [387 362]]
-2025-12-24 14:39:32,180 [INFO] 
+2026-01-13 12:54:16,597 [INFO] 
 Training and tuning: rf
-2025-12-24 14:42:27,139 [INFO] Validation metrics (rf): {
+2026-01-13 12:56:38,300 [INFO] Validation metrics (rf): {
   "accuracy": 0.5166666666666667,
   "f1": 0.5084745762711864,
   "roc_auc": 0.5224435954552809,
   "pr_auc": 0.5193902193037693
 }
-2025-12-24 14:42:27,139 [INFO] Confusion matrix (rf):
+2026-01-13 12:56:38,301 [INFO] Confusion matrix (rf):
 [[400 351]
  [374 375]]
-2025-12-24 14:42:27,139 [INFO] 
+2026-01-13 12:56:38,301 [INFO] 
 Training and tuning: gb
-2025-12-24 14:43:31,861 [INFO] Validation metrics (gb): {
+2026-01-13 12:57:17,957 [INFO] Validation metrics (gb): {
   "accuracy": 0.5046666666666667,
   "f1": 0.47416843595187547,
   "roc_auc": 0.5134586905932277,
   "pr_auc": 0.5124269034273345
 }
-2025-12-24 14:43:31,862 [INFO] Confusion matrix (gb):
+2026-01-13 12:57:17,957 [INFO] Confusion matrix (gb):
 [[422 329]
  [414 335]]
-2025-12-24 14:43:31,862 [INFO] 
+2026-01-13 12:57:17,957 [INFO] 
 Training and tuning: ada
-2025-12-24 14:43:40,857 [INFO] Validation metrics (ada): {
+2026-01-13 12:57:24,176 [INFO] Validation metrics (ada): {
   "accuracy": 0.4706666666666667,
   "f1": 0.467828418230563,
   "roc_auc": 0.48479641741585316,
   "pr_auc": 0.4996112232545118
 }
-2025-12-24 14:43:40,857 [INFO] Confusion matrix (ada):
+2026-01-13 12:57:24,176 [INFO] Confusion matrix (ada):
 [[357 394]
  [400 349]]
-2025-12-24 14:43:40,857 [INFO] 
+2026-01-13 12:57:24,176 [INFO] 
 Model comparison (validation PR-AUC):
-2025-12-24 14:43:40,857 [INFO] - rf: PR-AUC=0.5194  ROC-AUC=0.5224
-2025-12-24 14:43:40,857 [INFO] - gb: PR-AUC=0.5124  ROC-AUC=0.5135
-2025-12-24 14:43:40,857 [INFO] - ada: PR-AUC=0.4996  ROC-AUC=0.4848
-2025-12-24 14:43:40,857 [INFO] - logreg: PR-AUC=0.4942  ROC-AUC=0.4901
-2025-12-24 14:43:40,857 [INFO] 
+2026-01-13 12:57:24,176 [INFO] - rf: PR-AUC=0.5194  ROC-AUC=0.5224
+2026-01-13 12:57:24,176 [INFO] - gb: PR-AUC=0.5124  ROC-AUC=0.5135
+2026-01-13 12:57:24,176 [INFO] - ada: PR-AUC=0.4996  ROC-AUC=0.4848
+2026-01-13 12:57:24,176 [INFO] - logreg: PR-AUC=0.4942  ROC-AUC=0.4901
+2026-01-13 12:57:24,176 [INFO] 
 Selected model: rf with params: {'model__max_depth': 16, 'model__max_features': 0.5, 'model__min_samples_leaf': 5, 'model__min_samples_split': 2, 'model__n_estimators': 200}
-2025-12-24 14:43:40,901 [INFO] 
+2026-01-13 12:57:24,220 [INFO] 
 Test metrics at threshold=0.5:
-2025-12-24 14:43:40,901 [INFO] {
+2026-01-13 12:57:24,220 [INFO] {
   "accuracy": 0.5033333333333333,
   "f1": 0.4764581869290232,
   "roc_auc": 0.5097022394706479,
   "pr_auc": 0.5099785984442283
 }
-2025-12-24 14:43:40,901 [INFO] Confusion matrix:
+2026-01-13 12:57:24,220 [INFO] Confusion matrix:
 [[416 335]
  [410 339]]
-2025-12-24 14:43:40,901 [INFO] 
+2026-01-13 12:57:24,220 [INFO] 
 Business-optimized threshold: 0.000 (expected cost per decision=1.0013)
-2025-12-24 14:43:40,901 [INFO] Test metrics at business-optimized threshold:
-2025-12-24 14:43:40,901 [INFO] {
+2026-01-13 12:57:24,220 [INFO] Test metrics at business-optimized threshold:
+2026-01-13 12:57:24,220 [INFO] {
   "accuracy": 0.49933333333333335,
   "f1": 0.666073810582481,
   "roc_auc": 0.5097022394706479,
   "pr_auc": 0.5099785984442283
 }
-2025-12-24 14:43:40,901 [INFO] Confusion matrix:
+2026-01-13 12:57:24,220 [INFO] Confusion matrix:
 [[  0 751]
  [  0 749]]
-2025-12-24 14:43:48,248 [INFO] 
+2026-01-13 12:57:31,447 [INFO] 
 Top 15 features by permutation importance (validation PR-AUC drop):
-2025-12-24 14:43:48,248 [INFO]                      feature  importance_mean  importance_std
+2026-01-13 12:57:31,448 [INFO]                      feature  importance_mean  importance_std
 19  cat__Time_of_Day_Evening         0.013132        0.009575
 20  cat__Time_of_Day_Evening         0.007330        0.003105
 1   cat__Time_of_Day_Evening         0.007070        0.002792
@@ -99,5 +99,5 @@ Top 15 features by permutation importance (validation PR-AUC drop):
 8   cat__Time_of_Day_Evening         0.002283        0.000701
 18  cat__Time_of_Day_Evening         0.001079        0.003990
 4   cat__Time_of_Day_Evening        -0.000253        0.007014
-2025-12-24 14:43:48,287 [INFO] 
+2026-01-13 12:57:31,485 [INFO] 
 Saved model to artifacts/rf_model.joblib
